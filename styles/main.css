@@ -1,0 +1,49 @@
+html {
+  background-color: #fff8f4;
+}
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  line-height: 1.44em;
+  /* place the grid at the bottom */
+  position: absolute;
+  bottom: 15%;
+  color: #0C0F0A;
+}
+
+a {
+  color: #1B9AAA;
+  text-decoration-thickness: 1.5px;
+  text-decoration-color: #D8DBE2;
+  text-decoration-offset: 5px;
+}
+
+body > :first-child {
+  grid-area: message;
+  padding-right: 10%;
+}
+
+body > :last-child {
+  grid-area: signature;
+  font-style: italic;
+  text-align: right;
+}
+
+body {
+  display: grid;
+  width: 100%;
+  grid-template-columns: auto minmax(300px, 500px) auto;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  grid-template-areas:
+  ". message ."
+  ". signature .";
+}
+
+.normal {
+  font-style: normal;
+}
+
+.italic {
+  font-style: italic;
+}
