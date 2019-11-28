@@ -1,54 +1,37 @@
 html {
   background-color: #fff;
+  --unit: 5px;
 }
 
-body {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 14px;
-  letter-spacing: 0;
-  line-height: 21px;
-}
-
-.header { grid-area: header }
-.g1 { grid-area: g1}
-.g1-tiny { grid-area: g1-tiny}
-
-body {
-  display: grid;
-  width: 96%;
-  margin-left: auto;
-  margin-right: auto;
-  grid-template-columns: 1fr 5fr 1fr 1fr 3fr 1fr 1fr;
-  grid-column-gap: 15px;
-  grid-row-gap: 30px;
-  grid-template-areas:
-  "header header header header .   .        . "
-  ".      g1     g1     .      .   g1-tiny  . ";
-}
+/* TYPOGRAPHY  */
 
 h1 {
   font-weight: 200;
   /* TODO: Relative font sizing */
   font-size: 42px;
+  margin: 0;
   letter-spacing: 0;
   line-height: 50px;
 }
 
 h2, h3 {
+  margin: 0;
+  margin-bottom: var(--unit);
   font-size: 16px;
   letter-spacing: 1.1px;
-  line-height: 20px;
+  line-height: 22px;
 }
 
 h4, h5 {
+  margin: 0;
   font-size: 12px;
   letter-spacing: 1px;
-  line-height: 26px;
+  line-height: 20px;
   text-transform: uppercase;
 }
 
 hr.thick {
-  border-top: 10px solid #000;
+  border-top: calc(var(--unit)*2) solid #000;
 }
 
 hr {
@@ -61,4 +44,89 @@ hr {
 
 .italic {
   font-style: italic;
+}
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 21px;
+}
+
+/* OVERRIDES */
+
+img, p, span, div {
+  margin: 0;
+}
+
+a.tiny-project, a.project, a.article {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* TODO
+  - figure out why the hover isn't working on the tiny project
+  - add hover fade animation
+*/
+
+a:hover {
+  opacity: 0.6;
+}
+
+/* GRID SYSTEM */
+
+.header { grid-area: header }
+.g1 { grid-area: g1}
+.g1-tiny {grid-area: g1-tiny;}
+.g1-article { grid-area: g1-article }
+.g2-article { grid-area: g2-article }
+.g3 { grid-area: g3 }
+.g3-tiny { grid-area: g3-tiny }
+a.article > img { grid-area: a-img }
+a.article > div { grid-area: a-title }
+
+
+body {
+  display: grid;
+  width: 90%;
+  max-width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: calc(var(--unit)*15);
+  grid-template-columns: 1fr 5fr 1fr 1fr 3fr 1fr;
+  grid-column-gap: calc(var(--unit)*4);
+  grid-row-gap: calc(var(--unit)*15);
+  grid-template-areas:
+  "header header        header     header       .           . "
+  ".      g1            g1         .            g1-tiny     . "
+  ".      g1-article    g2-article g2-article   g2-article  ."
+  ".      g3            g3         .            g3-tiny     . ";
+}
+
+.project {
+  display: block;
+}
+
+.project:first-child {
+  margin-bottom: calc(var(--unit)*15);
+}
+
+.g1-tiny {
+  align-self: center;
+}
+
+a.article {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas:
+  "a-img a-title"
+}
+
+a.article > div {
+  align-self: center;
+}
+
+.spacer {
+  height: calc(var(--unit)*15);
+  background-color: none;
 }
