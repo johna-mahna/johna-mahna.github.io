@@ -6,19 +6,19 @@ html {
 /* TYPOGRAPHY  */
 
 h1 {
-  font-weight: 200;
+  font-weight: 500;
   /* TODO: Relative font sizing */
   font-size: 42px;
   margin: 0;
-  letter-spacing: 0;
+  letter-spacing: -1.2px;
   line-height: 50px;
 }
 
 h2, h3 {
   margin: 0;
-  margin-bottom: var(--unit);
+  margin-bottom: 0;
   font-size: 16px;
-  letter-spacing: 1.1px;
+  letter-spacing: 0.3px;
   line-height: 22px;
 }
 
@@ -88,19 +88,19 @@ a.article > div { grid-area: a-title }
 
 body {
   display: grid;
-  width: 90%;
+  /* width: 86%; */
   max-width: 1250px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: calc(var(--unit)*15);
-  grid-template-columns: 1fr 5fr 1fr 1fr 3fr 1fr;
+  margin-left: 7%;
+  margin-right: 10%;
+  margin-top: calc(var(--unit)*20);
+  grid-template-columns: 1fr 5fr 1fr 1fr 3fr;
   grid-column-gap: calc(var(--unit)*4);
-  grid-row-gap: calc(var(--unit)*15);
+  grid-row-gap: calc(var(--unit)*35);
   grid-template-areas:
-  "header header        header     header       .           . "
-  ".      g1            g1         .            g1-tiny     . "
-  ".      g1-article    g2-article g2-article   g2-article  ."
-  ".      g3            g3         .            g3-tiny     . ";
+  "header header        header     header       .           "
+  ".      g1            g1         .            g1-tiny     "
+  ".      g1-article    g2-article g2-article   g2-article  "
+  ".      g3            g3         .            g3-tiny     ";
 }
 
 .project {
@@ -111,13 +111,23 @@ body {
   margin-bottom: calc(var(--unit)*15);
 }
 
+.project h3 {
+  margin-bottom: var(--unit);
+}
+
 .g1-tiny {
   align-self: center;
 }
 
+.g3-tiny {
+  margin-top: calc(var(--unit)*18);
+}
+
 a.article {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  margin: 20px 0;
+  grid-template-columns: 100px auto;
+  grid-column-gap: calc(var(--unit)*3);
   grid-template-areas:
   "a-img a-title"
 }
