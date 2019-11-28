@@ -9,15 +9,21 @@ body {
   line-height: 21px;
 }
 
+.header { grid-area: header }
+.g1 { grid-area: g1}
+.g1-tiny { grid-area: g1-tiny}
+
 body {
   display: grid;
-  width: 85%;
-  grid-template-columns: 1fr 5fr 1fr 1fr 3fr 1fr;
-  grid-column-gap: 30px;
+  width: 96%;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: 1fr 5fr 1fr 1fr 3fr 1fr 1fr;
+  grid-column-gap: 15px;
   grid-row-gap: 30px;
   grid-template-areas:
-  ""
-  "";
+  "header header header header .   .        . "
+  ".      g1     g1     .      .   g1-tiny  . ";
 }
 
 h1 {
