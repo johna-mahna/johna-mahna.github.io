@@ -59,7 +59,7 @@ img, p, span, div {
   margin: 0;
 }
 
-a.tiny-project, a.project, a.article {
+a.tiny-project, a.project, a.article, .icon-group > a {
   text-decoration: none;
   color: inherit;
 }
@@ -76,6 +76,8 @@ a:hover {
 /* GRID SYSTEM */
 
 .header { grid-area: header }
+.icon-group {grid-area: icons}
+.footer {grid-area: footer }
 .g1 { grid-area: g1}
 .g1-tiny {grid-area: g1-tiny;}
 .g1-article { grid-area: g1-article }
@@ -84,7 +86,6 @@ a:hover {
 .g3-tiny { grid-area: g3-tiny }
 a.article > img { grid-area: a-img }
 a.article > div { grid-area: a-title }
-
 
 body {
   display: grid;
@@ -97,10 +98,19 @@ body {
   grid-column-gap: calc(var(--unit)*4);
   grid-row-gap: calc(var(--unit)*20);
   grid-template-areas:
-  "header header        header     header       .           "
+  "header header        header     header       icons       "
   ".      g1            g1         .            g1-tiny     "
   ".      g1-article    g2-article g2-article   g2-article  "
-  ".      g3            g3         .            g3-tiny     ";
+  ".      g3            g3         .            g3-tiny     "
+  ".      footer        footer     footer       footer      ";
+}
+
+.icon-group {
+  text-align: right;
+}
+
+.icon-group > a {
+  padding: 0 10px;
 }
 
 .project {
@@ -139,4 +149,24 @@ a.article > div {
 .spacer {
   height: calc(var(--unit)*15);
   background-color: none;
+}
+
+.gif-container {
+  display: flex;
+  align-content: flex-end;
+  justify-content: center;
+  height: 335px;
+  background-color: #eb8a78;
+  background-color: #ffe5bf;
+  margin-bottom: var(--unit);
+}
+
+.gif-container > img {
+  align-self: flex-end;
+}
+
+.footer {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 150px;
 }
