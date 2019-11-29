@@ -87,7 +87,7 @@ a:hover {
 a.article > img { grid-area: a-img }
 a.article > div { grid-area: a-title }
 
-body {
+.landing-grid {
   display: grid;
   /* width: 86%; */
   max-width: 1250px;
@@ -169,4 +169,51 @@ a.article > div {
   text-align: center;
   font-weight: 600;
   margin-bottom: 150px;
+}
+
+@media (max-width : 800px) {
+  .landing-grid {
+    display: grid;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: calc(var(--unit)*20);
+    grid-template-columns: 100%;
+    grid-column-gap: calc(var(--unit)*4);
+    grid-row-gap: calc(var(--unit)*10);
+    grid-template-areas:
+    "icons"
+    "header"
+    "g1"
+    "g1-tiny"
+    "g1-article"
+    "g2-article"
+    "g3       "
+    "g3-tiny  "
+    "footer";
+  }
+
+  .spacer {
+    display: none;
+  }
+
+  .g1-tiny > .bite {
+    display: inline-block;
+    width: 48%;
+    margin-bottom: calc(var(--unit)*10);
+    align-self: flex-start;
+  }
+
+  .gif-container {
+    min-height: 225px;
+    max-height: 300px;
+  }
+
+  .g3 > .project {
+    margin-bottom: 0;
+  }
+
+  .g3-tiny{
+    margin: 0;
+  }
+
 }
