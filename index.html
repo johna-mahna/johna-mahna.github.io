@@ -1,26 +1,154 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Johna Mandel</title>
+    <title>| | | | Johna Mandel | | | | </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:200,200i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 <body>
-  <div>
-    <p><strong>Hello and welcome; </strong>you<span class="italic">&rsquo;</span>re probably here to learn about me. Totally fair. Unfortunately, this site is under construction. In the meantime, maybe read one of my articles like
-      <a href="https://open.nytimes.com/css-grid-for-designers-f74a883b98f5" target="_blank">Css Grid for Designers</a> or
-      <a href="https://medium.com/startup-grind/google-home-vs-alexa-56e26f69ac77" target="_blank">Google Home vs Alexa</a>
-      <br/><span class="italic">&#8212; Please do stay tuned:</span>
-      </p>
+  <div class="landing-grid">
+    <h1 class="header">Johna Mandel used to do product design. She still does but she used to, too.</h1>
+    <div class="icon-group">
+      <a href="https://medium.com/@johnamandel" target="_blank">
+        <img src="images/icons/medium.png" width="18px"/>
+      </a>
+      <a href="https://www.linkedin.com/in/johnapaolino" target="_blank">
+        <img src="images/icons/linkedin.png" width="18px"/>
+      </a>
+      <a href="https://twitter.com/johna_mahna" target="_blank">
+        <img src="images/icons/twitter.png" width="18px"/>
+      </a>
+    </div>
 
-  </div>
-  <div>
-    All the best, <br/>
-    <span class="normal">(On Twitter
-      <a href="https://twitter.com/johna_mahna" target="_blank">@johna_mahna</a>)
-    </span> Johna Mandel <br/>
-    &#127926; ba dee bedebe &#127926;<br/>
+    <!-- The First Row -->
+    <div class="g1">
+      <a class="project" href="https://docs.google.com/presentation/d/1p6bMEiw3KTQPDQMM_BIxQ5YoFCiNq76K_JMCo2gWJ2k/edit?usp=sharing" target="_blank">
+        <hr class="thick"/>
+        <img src="images/programs-promo.jpg" width="100%"/>
+        <h5>Meaty project</h5>
+        <h2>Challenges for Readers;
+          <span class="italic light">Led design to create a new reusable storytelling format.</span>
+        </h2>
+        <p>Challenges help readers achieve a goal through a series of small tasks. The concept existed at the Times already, but had only been achieved through one-off designs. The redesign templatized the concept so it could be used for a variety of topics.</p>
+        <br/>
+        <span class="underline">Learn more.</span>
+      </a>
+      <div class="project">
+        <hr class="thick"/>
+        <div class="gif-container">
+          <img src="images/theguide.gif" width="80%"/>
+        </div>
+        <h5>Meaty project</h5>
+        <h2>City Guides;
+          <span class="italic light">Led design for a new travel product.</span>
+        </h2>
+        <p>The Times is already a known authority on travel, with well-established, recognizable franchises such as 52 Places and 36 Hours. City Guides hopes to find a balance between the inspiration of 52 Places and the on-the-ground itinerary of 36 Hours. It provides a practical yet comprehensive look at a city, guiding readers toward specific travel coverage for their needs.</p>
+        <br/>
+        <span class="italic">Case study coming soon.</span>
+      </div>
+    </div>
+
+    <div class="g1-tiny">
+      <span class="bite">
+        <a class="tiny-project" href="pages/event.html">
+          <img src="/images/thumbnails/event-border.png" width="100px"/>
+          <h5>Bite-size project</h5>
+          <h3>Event Check-in;</h3>
+          <p class="light">iPad check-in application for General Assembly campus locations.</p>
+        </a>
+      </span>
+      <div class="spacer"></div>
+      <span class="bite">
+        <a class="tiny-project" href="pages/python.html">
+          <img src="/images/thumbnails/python-thumbnail.jpg" width="100px"/>
+          <h5>Bite-size project</h5>
+          <h3>Drawing in Python;</h3>
+          <p class="light">Studies and explorations in drawing with code.</p>
+        </a>
+      </span>
+      <div class="spacer"></div>
+      <span class="bite">
+        <a class="tiny-project" href="https://twitter.com/glitch/status/1075801030112219136" target="_blank">
+          <img src="/images/thumbnails/lunch-border.png" width="100px"/>
+          <h5>Bite-size project</h5>
+          <h3>Lunch-Roulette;</h3>
+          <p class="light">A Glitch application I created to help officemates with lunch indecision.</p>
+        </a>
+      </span>
+    </div>
+
+    <!-- The Second Row -->
+    <div class="g1-article">
+      <hr class="thick"/>
+      <a class="article" href="https://open.nytimes.com/css-grid-for-designers-f74a883b98f5" target="_blank">
+        <img src="/images/thumbnails/css-grid.jpeg" width="100px"/>
+        <div>
+          <h5>Writing</h5>
+          <h3>TIMES OPEN; CSS for Designers</h3>
+          <p class="italic">How a new technology is changing layout on the web</p>
+        </div>
+      </a>
+      <hr/>
+      <a class="article" href="https://medium.com/startup-grind/google-home-vs-alexa-56e26f69ac77" target="_blank">
+        <img src="/images/thumbnails/google-alexa.jpeg" width="100px"/>
+        <div>
+          <h5>Writing</h5>
+          <h3>START-UP GRIND; Google Home vs Alexa</h3>
+          <p class="italic">Two Simple User Experience Design Gestures that Delighted a Female User</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="g2-article">
+      <hr class="thick"/>
+      <a class="article" href="https://adage.com/article/tech/css-grid-finally-starting-live-its-potential-web-design/2183326" target="_blank">
+        <img src="/images/thumbnails/ad-age.png" width="100px"/>
+        <div>
+          <h5>Featured in</h5>
+          <h3>AD AGE; CSS Grid is Finally Starting to Live Up To Its Potential in Web Design</h3>
+        </div>
+      </a>
+      <hr/>
+      <a class="article" href="https://www.thestar.com/news/canada/2017/01/15/why-siri-should-sound-like-a-cantankerous-old-white-guy-teitel.html" target="_blank">
+        <img src="/images/thumbnails/toronto.jpg" width="100px"/>
+        <div>
+          <h5>Featured in</h5>
+          <h3>TORONTO STAR; Why Siri Should Sound Like a Cantankerous Old White Guy</h3>
+        </div>
+      </a>
+    </div>
+
+    <!-- The Third Row -->
+    <div class="g3">
+      <a class="project" href="https://open.nytimes.com/its-all-part-of-the-plan-e165dba39842">
+        <hr class="thick"/>
+        <img src="images/workflow-promo.jpg" width="100%"/>
+        <h5>Meaty project</h5>
+        <h2>Story Dashboard;
+          <span class="italic light">Led design and vision for how planning and story management could work in the CMS.</span>
+        </h2>
+        <p>The CMS was originally designed to fulfill print production needs, so it was built primarily for print workflows. The way stories are planned and promoted for digital consumption needed to be rethought.</p>
+        <br/>
+        <span class="underline">Read about this project.</span>
+      </a>
+    </div>
+    <!-- TODO: add this project -->
+    <!-- <div class="g3-tiny">
+      <a class="tiny-project" href="#">
+        <img src="/images/thumbnails/cast-border.jpg" width="100px"/>
+        <h5>Bite-size project</h5>
+        <h3>CODECAST;</h3>
+        <p class="light">An integrated approach to classroom teaching.</p>
+      </a>
+    </div> -->
+    <span class="footer">&#127926; ba dee bedebe &#127926;</span>
+
+
+
+    <!-- <a href="https://open.nytimes.com/css-grid-for-designers-f74a883b98f5" target="_blank">Css Grid for Designers</a> or
+    <a href="https://medium.com/startup-grind/google-home-vs-alexa-56e26f69ac77" target="_blank">Google Home vs Alexa</a>
+    <a href="https://twitter.com/johna_mahna" target="_blank">@johna_mahna</a> -->
   </div>
 </body>
 </html>
