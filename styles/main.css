@@ -55,6 +55,10 @@ hr {
   font-weight: 200;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
 body {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 14px;
