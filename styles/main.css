@@ -8,10 +8,10 @@ html {
 h1 {
   font-weight: 500;
   /* TODO: Relative font sizing */
-  font-size: 42px;
+  font-size: 48px;
+  font-family: 'Junge', serif;
   margin: 0;
-  letter-spacing: -1.2px;
-  line-height: 50px;
+  line-height: 56px;
 }
 
 h2, h3 {
@@ -60,7 +60,7 @@ hr {
 }
 
 body {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Ubuntu Mono', monospace;
   font-size: 14px;
   letter-spacing: 0;
   line-height: 21px;
@@ -89,6 +89,7 @@ a:hover {
 /* GRID SYSTEM */
 
 .header { grid-area: header }
+.header-2 { grid-area: header2 }
 .icon-group {grid-area: icons}
 .footer {grid-area: footer }
 .g1 { grid-area: g1}
@@ -111,11 +112,15 @@ a.article > div { grid-area: a-title }
   grid-column-gap: calc(var(--unit)*4);
   grid-row-gap: calc(var(--unit)*20);
   grid-template-areas:
-  "header header        header     header       icons       "
-  ".      g1            g1         .            g1-tiny     "
-  ".      g1-article    g2-article g2-article   g2-article  "
-  ".      g3            g3         .            g3-tiny     "
-  ".      footer        footer     footer       footer      ";
+  "header     header        header     header       icons       "
+  ".          g1            g1         .            g1-tiny     "
+  "g1-article g1-article    .          g2-article   g2-article  "
+  ".          g3            g3         .            g3-tiny     "
+  ".          footer        footer     footer       footer      ";
+}
+
+.g2-article {
+  align-self:center;
 }
 
 .icon-group {
@@ -134,11 +139,9 @@ a.article > div { grid-area: a-title }
   margin-bottom: var(--unit);
 }
 
-.project > .gif-container {
-  margin-bottom: calc(var(--unit)*2);
-}
 
-.project:first-child {
+
+.project:first-child, .g3 > .project:first-child {
   margin-bottom: calc(var(--unit)*20);
 }
 
@@ -172,20 +175,6 @@ a.article > div {
   background-color: none;
 }
 
-.gif-container {
-  display: flex;
-  align-content: flex-end;
-  justify-content: center;
-  height: 335px;
-  background-color: #eb8a78;
-  background-color: #ffe5bf;
-  margin-bottom: var(--unit);
-}
-
-.gif-container > img {
-  align-self: flex-end;
-}
-
 .footer {
   text-align: center;
   font-weight: 600;
@@ -206,8 +195,8 @@ a.article > div {
     "header"
     "g1"
     "g1-tiny"
-    "g1-article"
     "g2-article"
+    "g1-article"
     "g3       "
     "g3-tiny  "
     "footer";
